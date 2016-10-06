@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="angular.js"></script>
+    <script src="https://rawgithub.com/gsklee/ngStorage/master/ngStorage.js"></script>
+</head>
+<body>
+    <div ng-controller="MyController">
+        <div>User name: {{$storage.userData.userName}}</div>
+        <div>User age: {{$storage.userData.age}}</div>
+        <div>
+            <input ng-model="$storage.userData.userName">
+            <input ng-model="$storage.userData.age">
+        </div>
+
+        <button ng-click="onSave()" type="submit">OK</button>
+
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
